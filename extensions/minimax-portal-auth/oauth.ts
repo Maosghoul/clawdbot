@@ -125,6 +125,7 @@ async function pollOAuthToken(params: {
     }),
   });
 
+
   if (!response.ok) {
     const text = await response.text();
     let payload: {

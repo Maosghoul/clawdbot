@@ -22,7 +22,9 @@ export async function applyAuthChoiceMiniMax(
   let nextConfig = params.config;
   let agentModelOverride: string | undefined;
   const noteAgentModel = async (model: string) => {
-    if (!params.agentId) return;
+    if (!params.agentId) {
+      return;
+    }
     await params.prompter.note(
       `Default model set to ${model} for agent "${params.agentId}".`,
       "Model configured",
@@ -42,7 +44,7 @@ export async function applyAuthChoiceMiniMax(
       authChoice: "minimax-portal",
       pluginId: "minimax-portal-auth",
       providerId: "minimax-portal",
-      methodId: endpoint as string,
+      methodId: endpoint,
       label: "MiniMax",
     });
   }
