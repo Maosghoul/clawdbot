@@ -508,7 +508,7 @@ function buildMinimaxProvider(): ProviderConfig {
   return {
     baseUrl: MINIMAX_PORTAL_BASE_URL,
     api: "anthropic-messages",
-    authHeader: true,
+    authHeader: false,
     models: [
       buildMinimaxTextModel({
         id: MINIMAX_DEFAULT_MODEL_ID,
@@ -544,7 +544,7 @@ function buildMinimaxPortalProvider(): ProviderConfig {
   return {
     baseUrl: MINIMAX_PORTAL_BASE_URL,
     api: "anthropic-messages",
-    // authHeader: true,
+    authHeader: false,
     models: [
       buildMinimaxTextModel({
         id: MINIMAX_DEFAULT_MODEL_ID,
